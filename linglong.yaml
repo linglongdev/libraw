@@ -1,0 +1,24 @@
+package:
+  id: libraw
+  name: libraw
+  version: 0.19.2
+  kind: lib
+  description: |
+    libraw.
+
+base:
+  id: org.deepin.base
+  version: 20.5.0
+
+source:
+  kind: git
+  url: https://github.com/deepin-community/libraw.git
+  version: uos
+  commit: 54311f4f63a63ad0c3e2d5ddcff2f1819607cfbe
+  patch: []
+variables:
+  extra_args: |
+    --enable-jpeg
+
+build:
+  kind: autotools
